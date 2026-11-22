@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Barricades/Barricades.csproj" />
+  <Project Path="Conditional/Conditional.csproj" />
+  <Project Path="Logging/Logging.csproj" />
+</Solution>
