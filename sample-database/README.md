@@ -27,8 +27,8 @@ For each PostgreSQL setup:
 Before starting a setup for the first time, copy the example file in that folder:
 
 ```powershell
-Copy-Item postgres-eventsdb\.env.example docker-definitions\postgres-eventsdb\.env
-Copy-Item mssql-eventsdb\.env.example docker-definitions\mssql-eventsdb\.env
+Copy-Item postgres-eventsdb\.env.example sample-database\postgres-eventsdb\.env
+Copy-Item mssql-eventsdb\.env.example sample-database\mssql-eventsdb\.env
 ```
 
 On Linux and macOS, make sure the shell scripts in each `init` folder are executable before starting the containers:
@@ -42,8 +42,8 @@ chmod +x postgres-eventsdb/init/*.sh
 For normal day-to-day startup, use:
 
 ```powershell
-docker compose -f docker-definitions\postgres-eventsdb\docker-compose.yml up -d
-docker compose -f docker-definitions\mssql-eventsdb\docker-compose.yml up -d
+docker compose -f sample-database\postgres-eventsdb\docker-compose.yml up -d
+docker compose -f sample-database\mssql-eventsdb\docker-compose.yml up -d
 ```
 
 For `mssql-eventsdb`, use `--build` when you changed the Docker image setup, for example:
